@@ -1,0 +1,66 @@
+# ===================================================================
+# .gitignore para projetos LaTeX
+# ===================================================================
+
+# Arquivo de Saída Principal (gerado a partir do .tex)
+# A prática recomendada é não versionar o PDF, pois ele é um produto da compilação.
+*.pdf
+
+
+# --- Arquivos de Log e Auxiliares da Compilação ---
+*.aux
+*.log
+*.lof
+*.lot
+*.toc
+*.fls
+*.fdb_latexmk
+*.out
+*.synctex
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+
+# --- Arquivos de Bibliografia (BibTeX/Biber) ---
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+
+# --- Arquivos de Índice, Glossário e Acrônimos ---
+# Vistos na sua imagem: .acn, .acr, .alg, .ist, .sbl, .slg
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.idx
+*.ind
+*.ist
+*.sbl
+*.slg
+
+
+# --- Arquivos de Ferramentas e Formatadores de Código ---
+# Visto na sua imagem: indent.log
+*~
+*.bak
+*.swp
+*.swo
+indent.log
+*.sym
+
+
+# --- Pastas de Editores e IDEs ---
+.vscode/
+.idea/
+.ionide/
+
+
+# --- Arquivos específicos de Sistemas Operacionais ---
+.DS_Store
+Thumbs.db

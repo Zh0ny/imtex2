@@ -1,0 +1,131 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%               IMTeX2               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[        
+    a4paper,          % Tamanho da folha A4
+    12pt,             % Tamanho da fonte 12pt
+    chapter=TITLE,    % Todos os capitulos devem ter caixa alta
+    oneside,          % Usada para impressao em apenas uma face do papel
+    english,          % Hifenizacoes em ingles
+    spanish,          % Hifenizacoes em espanhol
+    brazil,            % Ultimo idioma eh o idioma padrao do documento
+    hyphens        % Forçar a quebra de URLs que excedem a margem
+]{abntex2}
+%\usepackage[showframe]{geometry}
+\usepackage{lib/imtex2} % Pacote com as definicoes do IMTeX2
+\ies{Universidade Federal de Alagoas}
+\graduacaoem{Matemática}
+\habilitacao{Licenciatura}
+\autor{Autor Menin@ Matemáti@}
+\titulo{Exemplo título:}
+\subtitulo{Exemplo subtítulo}
+\local{Maceió - AL}
+\data{\the\year}
+% Defina a data de aprovação (DD, MM, AAAA)
+\dataaprovacao{01}{01}{2000}
+\trabalhoacademico{tccgraduacao}
+\qualificacao{nao}
+\removerbordasdohyperlink{sim}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%     Informação sobre o Orientador       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\orientador{Ótimo Orientado}
+\orientadories{Universidade Federal de Alagoas – UFAL}
+\orientadorcentro{Instituto de Matemática - IM}
+\orientadorfeminino{nao}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Informação sobre o Co-orientador   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\coorientador{}%Caso não tenha coorientador coloque em branco
+\coorientadories{Universidade Co-orientador - SIGLA}
+\coorientadorcentro{Centro do Co-orientador - SIGLA}
+\coorientadorfeminino{nao}
+
+%Caso exista coorientador as numerações abaixo a respeito dos membros da banca devem ser desconsideradas.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Informação sobre o Membro da banca 2   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\membrodabancadois{Membro da Banca Dois}
+\membrodabancadoiscentro{Universidade Banca Dois - SIGLA}
+\membrodabancadoisies{Centro da Banca Dois - SIGLA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Informação sobre o Membro da banca 3   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\membrodabancatres{Membro da Banca Três}
+\membrodabancatrescentro{Universidade Banca Três - SIGLA}
+\membrodabancatresies{Centro da Banca Três - SIGLA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Informação sobre o Membro da banca 4   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\membrodabancaquatro{Membro da Banca Quatro}
+\membrodabancaquatrocentro{Universidade Banca Quatro - SIGLA}
+\membrodabancaquatroies{Centro da Banca Quatro - SIGLA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Informação sobre o Membro da banca 5   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\membrodabancacinco{Membro da Banca Cinco}
+\membrodabancacincocentro{Universidade Banca Cinco - SIGLA}
+\membrodabancacincoies{Centro da Banca Cinco - SIGLA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Informação sobre o Membro da banca 6   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\membrodabancaseis{}
+\membrodabancaseiscentro{Universidade Banca Seis - SIGLA}
+\membrodabancaseisies{Centro da Banca Seis - SIGLA}
+
+\input{elementos_pre_textuais/opcional/lista_de_abreviaturas_e_siglas}
+\glsaddall[types=acronym]
+\begin{document}
+    \imprimircapa
+    \imprimirfolhaderosto{}
+    \imprimirerrata{elementos_pre_textuais/opcional/errata}
+    \imprimirfolhadeaprovacao
+    \imprimirdedicatoria{elementos_pre_textuais/opcional/dedicatoria}
+    \imprimiragradecimentos{elementos_pre_textuais/opcional/agradecimentos}
+    \imprimirepigrafe{elementos_pre_textuais/opcional/epigrafe}
+    \imprimirresumo{elementos_pre_textuais/resumo_na_lingua_vernacula}
+    \imprimirabstract{elementos_pre_textuais/resumo_em_lingua_estrangeira}
+    \imprimirlistadeilustracoes
+    \imprimirlistadetabelas
+    \imprimirlistadeabreviaturasesiglas
+    \imprimirlistadesimbolos
+    \imprimirsumario
+    %
+    \textual
+    \input{elementos_textuais/introducao}
+    \input{elementos_textuais/fundamentacao_teorica}
+    \input{elementos_textuais/trabalhos_relacionados}
+    \input{elementos_textuais/metodologia}
+    \input{elementos_textuais/desenvolvimento.tex}
+    \input{elementos_textuais/resultados}
+    \input{elementos_textuais/conclusao}
+
+    %Elementos pós-textuais	
+    \bibliography{elementos_pos_textuais/referencias}
+    \input{elementos_pos_textuais/opcional/glossario}
+    \imprimirglossario
+    \imprimirapendices
+    % Adicione aqui os apendices do seu trabalho
+    \input{elementos_pos_textuais/opcional/apendice}
+    \imprimiranexos
+    % Adicione aqui os anexos do seu trabalho
+    \input{elementos_pos_textuais/opcional/anexo}
+    \imprimirindice
+\end{document}
